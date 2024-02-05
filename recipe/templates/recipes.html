@@ -3,22 +3,24 @@
 <div class="container my-4">
   <div class="d-flex justify-content-end">
     <a href="/add_recipes">
-        <button type="button" class="btn btn-primary">Add Recipe</button>
+      <button type="button" class="btn btn-primary">Add Recipe</button>
     </a>
   </div>
-  <h1 class="text-center my-3">Enjoy the Recipies That I created</h1>
+  <h1 class="text-center my-3 rowdies-regular" style="color:rgb(220, 50, 50)">Enjoy the Recipies That I created</h1>
+  {% block content %}
+   
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    {% for recipe in recipes %}
     <div class="col">
       <div class="card shadow-sm">
         <img
-          src="https://source.unsplash.com/1200x900/?nature,water"
+          src="/media/{{recipe.recipe_image}}" style="height:400px"
           class="d-block w-100"
           alt=""
         />
         <div class="card-body">
-          <p class="card-text">
-            This is a random nature image from api hope you enjoy.
-          </p>
+          <h5 class="card-title text-center rowdies-light">{{ recipe.recipe_name }}</h5>
+          <p class="card-text"></p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <button type="button" class="btn btn-sm btn-outline-secondary">
@@ -28,213 +30,13 @@
                 Edit
               </button>
             </div>
-            <small class="text-body-secondary">9 mins</small>
           </div>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img
-          src="https://source.unsplash.com/1200x900/?nature,forest"
-          class="d-block w-100"
-          alt=""
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a random nature image from api hope you enjoy.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-body-secondary">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img
-          src="https://source.unsplash.com/1200x900/?nature,river"
-          class="d-block w-100"
-          alt=""
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a random nature image from api hope you enjoy.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-body-secondary">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card shadow-sm">
-        <img
-          src="https://source.unsplash.com/1200x900/?nature,human"
-          class="d-block w-100"
-          alt=""
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a random nature image from api hope you enjoy.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-body-secondary">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img
-          src="https://source.unsplash.com/1200x900/?nature,animal"
-          class="d-block w-100"
-          alt=""
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a random nature image from api hope you enjoy.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-body-secondary">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img
-          src="https://source.unsplash.com/1200x900/?nature,city"
-          class="d-block w-100"
-          alt=""
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a random nature image from api hope you enjoy.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-body-secondary">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card shadow-sm">
-        <img
-          src="https://source.unsplash.com/1200x900/?nature,bird"
-          class="d-block w-100"
-          alt=""
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a random nature image from api hope you enjoy.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-body-secondary">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img
-          src="https://source.unsplash.com/1200x900/?nature"
-          class="d-block w-100"
-          alt=""
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a random nature image from api hope you enjoy.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-body-secondary">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img
-          src="https://source.unsplash.com/1200x900/?nature,fish"
-          class="d-block w-100"
-          alt=""
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a random nature image from api hope you enjoy.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-              </button>
-            </div>
-            <small class="text-body-secondary">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
+  
+  {% endblock content %}
 </div>
 {% endblock body %}
