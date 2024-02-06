@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block body %}
+
+<div class="container my-4">
+  <h1 class="text-center my-3 rowdies-regular" style="color:rgb(220, 50, 50)">{{ recipe.recipe_name }}</h1>
+  {% block content %}
+   
+  <div class="row justify-content-center ">
+    <div class="col-sm-8"> 
+        <div class="card shadow-sm">
+        <img
+          src="/media/{{recipe.recipe_image}}" style="height:400px"
+          class="d-block w-100"
+          alt=""
+        />
+        <div class="card-body">
+            <h1> {{ recipe.recipe_description }} </h1>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% endblock content %}
+</div>
+{% endblock body %}
