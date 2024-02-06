@@ -23,12 +23,13 @@
           <p class="card-text"></p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
+              <a href="/view_recipe/{{ recipe.id }}"> <button type="button" class="btn btn-sm btn-outline-secondary">
                 View
-              </button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">
+              </button></a>
+              <a href="/update_recipe/{{ recipe.id }}"><button type="button" class="btn btn-sm btn-outline-secondary">
                 Edit
-              </button>
+              </button></a>
+              
             </div>
           </div>
         </div>
